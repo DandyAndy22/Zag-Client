@@ -1,5 +1,5 @@
 $(updateView)
 
 function updateView() {
-    alert("Welcome to the Thuder Dome");
+    alert("Welcome to the Thunder Dome")
 }

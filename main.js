@@ -1,1 +1,5 @@
-alert("Nom Nom Nom Nom")
+$(updateView)
+
+function updateView() {
+    alert("Nom Nom Nom Nom")
+}

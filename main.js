@@ -1,11 +1,11 @@
 const BASE_URL = "https://zagster-service.herokuapp.com"
 
-$(updateView) // $ is shorthand 
+$(updateView) 
 
 function updateView() {
     $.getJSON(BASE_URL + "/rides/count", (UpdateRideCount))
 }
 function UpdateRideCount(data) {
     numberofRides = data.count
-    $("h2#rideCount"). html(numberofrides)
+    $("h2#rideCount").html(numberofrides)
 }

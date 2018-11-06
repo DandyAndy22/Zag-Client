@@ -1,5 +1,11 @@
-$(updateView)
+const BASE_URL = "https://zagster-service.herokuapp.com"
+
+$(updateView) // $ is shorthand 
 
 function updateView() {
-    alert("Welcome to the Thunder Dome")
+    $.getJSON(BASE_URL + "/rides/count", (UpdateRideCount))
+}
+function UpdateRideCount(data) {
+    numberofRides = data.count
+    $("h2#rideCount"). html(numberofrides)
 }

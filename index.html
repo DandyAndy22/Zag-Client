@@ -7,14 +7,31 @@
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-     <script src="main.js"></script>
+     <script src="Main.js"></script>
+     <div class="chart"></div>    
+     <script src="https://d3js.org/d3.v5.min.js" charset="UTF-8"></script>
      <link rel="stylesheet" href="main.css">
   </head>
-     <h1>Zagster Bike Share Data</h1>
-
+    
   <body>
-    <h2 id="rideCount">TO DO</h2>
-    <p>Total Rides</p>
+    <header class="page-header" >
+        <h1>Zagster Bike Share Data</h1>
+        <h2 id="rideCount">TO DO</h2>
+
+    </header>
+
+      <script>
+      
+        var data = [4, 8, 15, 16, 23, 42];
+        var chart = d3.select(".chart");
+        var bar = chart.selectAll("div");
+        var barUpdate = bar.data(data);
+        var barEnter = barUpdate.enter().append("div");
+        var margin = {top: 60, right: 60, bottom: 60, left:120};
+        barEnter.style("width", function(d) { return d * 10 + "px"; });
+        barEnter.text(function(d) { return d; });
+
+      </script>
 
   </body>
 </html>
